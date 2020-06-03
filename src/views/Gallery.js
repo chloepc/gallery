@@ -1,38 +1,16 @@
 import React from "react";
-import { Image } from "./Image";
 import { Link } from "react-router-dom";
+import { data } from "../data/data";
 export function Gallery() {
   return (
     <div className="Gallery">
-      <Link to="/image">
-        <Image />
-      </Link>
-      <Link to="/image">
-        <Image />
-      </Link>
-      <Link to="/image">
-        <Image />
-      </Link>
-      <Link to="/image">
-        <Image />
-      </Link>
-      <Link to="/image">
-        <Image />
-      </Link>
-      <Link to="/image">
-        <Image />
-      </Link>
-      <Link to="/image">
-        <Image />
-      </Link>
-      <Link to="/image">
-        <Image />
-      </Link>
-      <Link to="/image">
-        <Image />
-      </Link>
-
-     
+      {data.images.map(image => {
+        return (
+          <Link to={"/images/" + image.id} key={image.id}>
+            <img src={image.small} alt="" />
+          </Link>
+        );
+      })}
     </div>
   );
 }
