@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { data } from "../data/data";
+import Container from "@material-ui/core/Container";
 
 export function ImageView() {
   const params = useParams();
@@ -8,11 +9,11 @@ export function ImageView() {
   const image = data.images.filter(image => image.id === imageId)[0];
 
   return (
-    <div>
+    <Container>
       ImageView
       <Link to={"/"}>
         <img src={image.big} alt="description" />
       </Link>
-    </div>
+    </Container>
   );
 }
