@@ -14,15 +14,17 @@ export function App() {
     <BrowserRouter>
       <div>
         <AppBar>
-          <Toolbar className={styles.toolbar}>
-            <Typography>Gallery</Typography>
+          <Toolbar>
+            <div className={styles.content}>
+              <Typography>Gallery</Typography>
 
-            <Link component={RouterLink} color="inherit" to="/about">
-              About
-            </Link>
-            <Link component={RouterLink} color="inherit" to="/help">
-              Help
-            </Link>
+              <Link component={RouterLink} color="inherit" to="/about">
+                About
+              </Link>
+              <Link component={RouterLink} color="inherit" to="/help">
+                Help
+              </Link>
+            </div>
           </Toolbar>
         </AppBar>
         <Toolbar />
