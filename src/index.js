@@ -7,7 +7,10 @@ import red from "@material-ui/core/colors/red";
 import { App } from "./App";
 
 const theme = createMuiTheme({
-  palette: { primary: red }
+  palette: { primary: red },
+  typography: {
+    h1: { fontSize: "2rem", fontWeight: "500" }
+  }
 });
 
 const rootElement = document.getElementById("root");
